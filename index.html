@@ -1,277 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dhyan Kumar M - Portfolio</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  
-  <style>
-    /* Reset and base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhyan Kumar M - Portfolio</title>
+<style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f2f7fa;
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+        font-family: Arial, sans-serif;
+        color: #222;
+        margin: 0;
+        background: #f8f8f8;
     }
-    a {
-      color: #0a66c2;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* Container */
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px 40px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      border-radius: 10px;
+        max-width: 850px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
+    h1, h2 {
+        margin-bottom: 5px;
     }
-    header h1 {
-      font-size: 2.8rem;
-      color: #0a4e8c;
-      margin-bottom: 6px;
+    h1 {
+        font-size: 2em;
+        text-align: center;
     }
-    header h2 {
-      font-weight: 500;
-      color: #555;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
+    h2 {
+        border-bottom: 2px solid #000;
+        padding-bottom: 3px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        font-size: 1.2em;
     }
-    header p {
-      font-size: 1rem;
-      color: #666;
+    .subheading {
+        text-align: center;
+        font-style: italic;
+        color: #555;
     }
-    /* Navigation */
-    nav {
-      margin-bottom: 30px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 12px;
+    .contact {
+        text-align: center;
+        font-size: 0.95em;
+        margin-bottom: 10px;
     }
-    nav a {
-      margin: 0 16px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-      cursor: pointer;
+    .contact a {
+        color: #0645AD;
+        text-decoration: none;
     }
-    nav a:hover {
-      color: #004080;
+    .section-content {
+        margin-top: 10px;
     }
-    /* Section Styles */
-    section {
-      margin-bottom: 40px;
+    ul {
+        margin: 5px 0 5px 20px;
     }
-    section h3 {
-      color: #0a4e8c;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      border-bottom: 3px solid #0a4e8c;
-      padding-bottom: 6px;
-      display: inline-block;
+    .section-title {
+        font-weight: bold;
+        margin-bottom: 2px;
     }
-    /* Skills List */
-    .skills-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      font-size: 1rem;
+    .date {
+        float: right;
+        color: #666;
+        font-style: italic;
     }
-    .skills-list li {
-      background: #e7f1ff;
-      color: #0a4e8c;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 20px;
-      box-shadow: 0 1px 6px rgba(10,78,140,0.15);
+    .item {
+        margin-bottom: 12px;
+        clear: both;
     }
-    /* Skill bars for proficiency */
-    .skill-bar {
-      margin-bottom: 12px;
-    }
-    .skill-bar p {
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #004080;
-    }
-    .progress-container {
-      background: #d9e6ff;
-      border-radius: 20px;
-      overflow: hidden;
-      height: 18px;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .progress-bar {
-      height: 18px;
-      background: #0a4e8c;
-      width: 0;
-      transition: width 1.5s ease-in-out;
-    }
-    /* Publications and lists */
-    ul.publication-list,
-    ul.simple-list {
-      list-style: disc inside;
-      padding-left: 20px;
-      font-size: 1rem;
-      color: #444;
-    }
-    ul.publication-list li {
-      margin-bottom: 12px;
-    }
-    /* Contact links */
-    .contact-info {
-      font-size: 1.1rem;
-      color: #444;
-    }
-    .contact-info a {
-      margin-left: 6px;
-      font-weight: 600;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px 15px;
-        padding: 25px;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .skills-list {
-        justify-content: center;
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
 
 <div class="container">
-  <!-- Header -->
-  <header>
+    <!-- HEADER -->
     <h1>Dhyan Kumar M</h1>
-    <h2>Aspiring AI/ML Professional | Published Author | Intern</h2>
-    <p>
-      Email: <a href="mailto:dhyankumar32@gmail.com">dhyankumar32@gmail.com</a> | Phone: <a href="tel:+918310637893">+91 83106 37893</a> <br />
-      LinkedIn: <a href="https://www.linkedin.com/in/dhyan-kumar-8238892a8/" target="_blank" rel="noopener noreferrer">dhyan-kumar-8238892a8</a>
-    </p>
-  </header>
-  
-  <!-- Navigation -->
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#languages">Languages</a>
-    <a href="#research">Research Paper</a>
-    <a href="#internship">Internship</a>
-    <a href="#certifications">Certifications</a>
-  </nav>
+    <div class="subheading">Logistic Coder and ML Enthusiast</div>
+    <div class="contact">
+        <a href="mailto:dhyankumar32@gmail.com">dhyankumar32@gmail.com</a> | +91-8310637893 | Bangalore, Karnataka<br>
+        <a href="https://github.com/dhyanmanav" target="_blank">github.com/dhyanmanav</a> | 
+        <a href="https://linkedin.com/in/dhyan-kumar-m-8238892a8" target="_blank">linkedin.com/in/dhyan-kumar-m-8238892a8</a>
+    </div>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h3>Skills</h3>
-    <p><strong>Languages (Proficient):</strong></p>
-    <ul class="skills-list">
-      <li>Java</li>
-      <li>Python</li>
-      <li>C</li>
-      <li>C++</li>
-      <li>HTML</li>
-      <li>JavaScript</li>
-      <li>CSS</li>
-    </ul>
-    <p><strong>Languages (Familiar):</strong></p>
-    <ul class="skills-list">
-      <li>C#</li>
-      <li>SQL</li>
-    </ul>
-    <p><strong>Tools & Technologies:</strong></p>
-    <ul class="skills-list">
-      <li>Git</li>
-      <li>Machine Learning</li>
-      <li>CSV File Handling</li>
-      <li>Geolocation APIs</li>
-      <li>Unix OS</li>
-    </ul>
-  </section>
+    <!-- SUMMARY -->
+    <h2>Summary</h2>
+    <div class="section-content">
+        Innovative and detail-oriented Computer Science enthusiast with hands-on experience in systems programming, Python development, and interactive application design. AIML enthusiast skilled in C, C++, Java, Python, and modern ML frameworks, with a passion for building efficient, user-focused software solutions.
+    </div>
 
-  <!-- Languages Known -->
-  <section id="languages">
-    <h3>Languages Known</h3>
-    <ul class="simple-list">
-      <li>Kannada</li>
-      <li>English</li>
-      <li>Hindi</li>
-    </ul>
-  </section>
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    <div class="section-content">
+        <div class="item"><span class="section-title">Bunts Sangha RNS Vidyaniketan, Bangalore</span> <span class="date">Jul 2008 – Mar 2021</span><br>
+        ICSE Board — 10th Standard, 89.5%</div>
 
-  <!-- Research Paper -->
-  <section id="research">
-    <h3>Research Paper & Publication</h3>
-    <ul class="publication-list">
-      <li>
-        <strong>“AI Voice-Based Revision Assistant”</strong> – Published in <em>International Journal of Innovative Science and Research Technology (IJISRT)</em>, Volume 10, Issue 6, June 2025.<br />
-        This project leverages AI-powered speech recognition to help students learn interactively and get personalized feedback while revising.<br />
-        <a href="https://doi.org/10.38124/ijisrt/25jun1312" target="_blank" rel="noopener noreferrer">Read full paper here</a><br />
-        Author Certificate ID: IJISRT25JUN1312
-      </li>
-    </ul>
-  </section>
+        <div class="item"><span class="section-title">Base PU College, Bangalore</span> <span class="date">Jul 2021 – Mar 2023</span><br>
+        Karnataka State Board — 2nd PUC, 87.5%</div>
 
-  <!-- Internship -->
-  <section id="internship">
-    <h3>Internship Experience</h3>
-    <ul class="simple-list">
-      <li>
-        <strong>Machine Learning Intern</strong> on <em>Agentic AI</em> (Remote from Bangalore, India;<br />Jul 3 – Jul 25, 2025)<br />
-        Worked on a confidential computer vision project focusing on image analysis related to architectural/spatial data. Involved in data annotation, training ML models, and enhancing labeling efficiency.
-      </li>
-    </ul>
-  </section>
+        <div class="item"><span class="section-title">Global Academy of Technology, Bangalore</span> <span class="date">Sep 2023 – Jul 2027</span><br>
+        B.E. in Computer Science and Engineering — GPA: 9/10</div>
+    </div>
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <h3>Certifications</h3>
-    <ul class="simple-list">
-      <li>Python Programming – Infosys Springboard</li>
-      <li>Author Certificate – International Journal of Innovative Science and Research Technology (IJISRT)</li>
-    </ul>
-  </section>
+    <!-- TECHNICAL SKILLS -->
+    <h2>Technical Skills</h2>
+    <div class="section-content">
+        <b>Languages:</b> C, Java, Python, JavaScript <br>
+        <b>Frontend:</b> HTML5, CSS3, React.js, Angular, Bootstrap <br>
+        <b>Tools & Frameworks:</b> Git, Linux, VS Code, Roboflow, Hugging Face, YOLO, Grounding Dino, Florence 2, Google Colab, Jupyter Notebook
+    </div>
+
+    <!-- PROJECTS -->
+    <h2>Projects</h2>
+    <div class="section-content">
+        <div class="item"><span class="section-title">Custom Shell Development</span> — Advanced Linux shell with integrated voice commands
+            <ul>
+                <li>Designed and implemented a custom Linux shell with command aliases, interactive prompts, and workflow-optimizing shortcuts.</li>
+                <li>Integrated a voice-command system using speech recognition to enable hands-free file creation and navigation.</li>
+            </ul>
+        </div>
+        <div class="item"><span class="section-title">Child Security Management System</span> — Python-based monitoring tool
+            <ul>
+                <li>Built an application for real-time child monitoring, tracking activity patterns and triggering emergency alerts for safety.</li>
+                <li>Designed an interactive dashboard in Jupyter Notebook for visual analytics using Python libraries.</li>
+            </ul>
+        </div>
+        <div class="item"><span class="section-title">2D Action Shooter Game</span> — Godot Engine (GDScript)
+            <ul>
+                <li>Developed a progressive 2D action shooter game with enemy AI, collision mechanics, and multi-level difficulty scaling.</li>
+                <li>Designed scoring algorithms and custom game assets to enhance replay value and player engagement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <h2>Work Experience</h2>
+    <div class="section-content">
+        <div class="item"><span class="section-title">Machine Learning Intern — Avinya Build AI, Cupertino</span> <span class="date">Jul 2025</span>
+            <ul>
+                <li>Trained and optimized ML models for object recognition in architectural floor plan datasets, achieving 85% accuracy.</li>
+                <li>Collaborated on dataset preprocessing, performance evaluation, and results validation while adhering to NDA protocols.</li>
+            </ul>
+        </div>
+        <div class="item"><span class="section-title">Sports Coordinator — Global Academy of Technology</span> <span class="date">Jan 2024</span>
+            <ul>
+                <li>Led the planning, coordination, and execution of state-level sports events involving multiple institutions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <h2>Certifications</h2>
+    <div class="section-content">
+        Python Programming — Infosys Springboard (2025) <br>
+        Author Certificate — IJISRT (2025) <br>
+        Abstract & Participation — IBM-Z Datathon (2024)
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <h2>Achievements</h2>
+    <div class="section-content">
+        <ul>
+            <li>Published a research paper on AI Voice-Based Assistant in IJISRT, 2025.</li>
+        </ul>
+    </div>
+
 </div>
-
-<script>
-  // Smooth scroll for nav links
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if(target) {
-        window.scrollTo({
-          top: target.offsetTop - 20,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-</script>
 </body>
 </html>
+
 
