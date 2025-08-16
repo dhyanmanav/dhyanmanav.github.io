@@ -2269,4 +2269,53 @@ body {
       0 0 120px #00fff7;
   }
 }
+@media (max-width: 767px) {
+  .btn-neon-small {
+    box-shadow:
+      0 0 20px #00fff7,
+      0 0 60px #00fff7,
+      0 0 90px #00fff7;
+    text-shadow:
+      0 0 15px #00fff7,
+      0 0 30px #00fff7;
+    filter: drop-shadow(0 0 8px #00fff7);
+  }
+
+  .btn-neon-small:hover,
+  .btn-neon-small:focus {
+    box-shadow:
+      0 0 40px #00fff7,
+      0 0 90px #00fff7,
+      0 0 140px #00fff7;
+    filter: drop-shadow(0 0 12px #00fff7);
+  }
+}
+@media (max-width: 767px) {
+  .btn-neon-small {
+    padding: 14px 28px;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 767px) {
+  .btn-neon-small {
+    animation: neonPulse 2.5s infinite ease-in-out;
+  }
+
+  @keyframes neonPulse {
+    0%, 100% {
+      box-shadow:
+        0 0 15px #00fff7,
+        0 0 45px #00fff7,
+        0 0 75px #00fff7;
+      filter: drop-shadow(0 0 8px #00fff7);
+    }
+    50% {
+      box-shadow:
+        0 0 35px #00fff7,
+        0 0 85px #00fff7,
+        0 0 110px #00fff7;
+      filter: drop-shadow(0 0 16px #00fff7);
+    }
+  }
+}
 
