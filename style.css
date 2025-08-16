@@ -2109,25 +2109,51 @@ body {
 }
 .btn-neon {
   display: inline-block;
-  padding: 12px 24px;
-  color: #00ffff;
-  border: 2px solid #00ffff;
-  border-radius: 6px;
-  font-family: 'Fira Code', monospace;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  padding: 16px 38px;
+  font-size: 1.15rem;
+  color: #00fff7;
   background: transparent;
-  cursor: pointer;
-  box-shadow: 0 0 8px #00ffff;
-  transition: 0.3s ease-in-out;
+  border: 2.5px solid #00fff7;
+  border-radius: 8px;
+  box-shadow: 0 0 18px #26fff9, 0 0 38px #26fff960;
+  text-shadow: 0 0 8px #26fff9;
+  letter-spacing: 2.5px;
+  font-family: 'Orbitron', 'Fira Code', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s,
+    background 0.3s,
+    transform 0.15s;
 }
 
-.btn-neon:hover {
-  background-color: #00ffff;
+.btn-neon:hover, .btn-neon:focus {
   color: #0a0a0a;
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  background: #00fff7;
+  border-color: #00fff7;
+  box-shadow:
+    0 0 32px #00fff7,
+    0 0 64px #00fff7;
+  text-shadow: none;
+  transform: translateY(-3px) scale(1.05);
+  cursor: pointer;
+}
+
+.btn-neon i {
+  margin-left: 8px;
+  font-size: 1.1em;
+  transition: transform 0.3s;
+  vertical-align: middle;
+}
+
+.btn-neon:hover i {
+  transform: translateY(-2px) scale(1.18) rotate(-14deg);
 }
 
