@@ -2318,4 +2318,15 @@ body {
     }
   }
 }
+.btn-neon-small {
+  color: #00ffff;
+  background-color: rgba(0, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-color: #00ffff;
+  text-shadow:
+    0 0 16px #00ffff,
+    0 0 32px #00ffff,
+    0 0 48px #00ffff;
+  -webkit-text-stroke: 0.6px #00ffff;
+}
 
