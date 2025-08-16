@@ -1,168 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhyan Kumar M - Portfolio</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        color: #222;
-        margin: 0;
-        background: #f8f8f8;
-    }
-    .container {
-        max-width: 850px;
-        margin: auto;
-        background: #fff;
-        padding: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-        margin-bottom: 5px;
-    }
-    h1 {
-        font-size: 2em;
-        text-align: center;
-    }
-    h2 {
-        border-bottom: 2px solid #000;
-        padding-bottom: 3px;
-        margin-top: 30px;
-        text-transform: uppercase;
-        font-size: 1.2em;
-    }
-    .subheading {
-        text-align: center;
-        font-style: italic;
-        color: #555;
-    }
-    .contact {
-        text-align: center;
-        font-size: 0.95em;
-        margin-bottom: 10px;
-    }
-    .contact a {
-        color: #0645AD;
-        text-decoration: none;
-    }
-    .section-content {
-        margin-top: 10px;
-    }
-    ul {
-        margin: 5px 0 5px 20px;
-    }
-    .section-title {
-        font-weight: bold;
-        margin-bottom: 2px;
-    }
-    .date {
-        float: right;
-        color: #666;
-        font-style: italic;
-    }
-    .item {
-        margin-bottom: 12px;
-        clear: both;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhyan Kumar M | Logistic Coder & ML Enthusiast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-<div class="container">
-    <!-- HEADER -->
-    <h1>Dhyan Kumar M</h1>
-    <div class="subheading">Logistic Coder and ML Enthusiast</div>
-    <div class="contact">
-        <a href="mailto:dhyankumar32@gmail.com">dhyankumar32@gmail.com</a> | +91-8310637893 | Bangalore, Karnataka<br>
-        <a href="https://github.com/dhyanmanav" target="_blank">github.com/dhyanmanav</a> | 
-        <a href="https://linkedin.com/in/dhyan-kumar-m-8238892a8" target="_blank">linkedin.com/in/dhyan-kumar-m-8238892a8</a>
-    </div>
-
-    <!-- SUMMARY -->
-    <h2>Summary</h2>
-    <div class="section-content">
-        Innovative and detail-oriented Computer Science enthusiast with hands-on experience in systems programming, Python development, and interactive application design. AIML enthusiast skilled in C, C++, Java, Python, and modern ML frameworks, with a passion for building efficient, user-focused software solutions.
-    </div>
-
-    <!-- EDUCATION -->
-    <h2>Education</h2>
-    <div class="section-content">
-        <div class="item"><span class="section-title">Bunts Sangha RNS Vidyaniketan, Bangalore</span> <span class="date">Jul 2008 – Mar 2021</span><br>
-        ICSE Board — 10th Standard, 89.5%</div>
-
-        <div class="item"><span class="section-title">Base PU College, Bangalore</span> <span class="date">Jul 2021 – Mar 2023</span><br>
-        Karnataka State Board — 2nd PUC, 87.5%</div>
-
-        <div class="item"><span class="section-title">Global Academy of Technology, Bangalore</span> <span class="date">Sep 2023 – Jul 2027</span><br>
-        B.E. in Computer Science and Engineering — GPA: 9/10</div>
-    </div>
-
-    <!-- TECHNICAL SKILLS -->
-    <h2>Technical Skills</h2>
-    <div class="section-content">
-        <b>Languages:</b> C, Java, Python, JavaScript <br>
-        <b>Frontend:</b> HTML5, CSS3, React.js, Angular, Bootstrap <br>
-        <b>Tools & Frameworks:</b> Git, Linux, VS Code, Roboflow, Hugging Face, YOLO, Grounding Dino, Florence 2, Google Colab, Jupyter Notebook
-    </div>
-
-    <!-- PROJECTS -->
-    <h2>Projects</h2>
-    <div class="section-content">
-        <div class="item"><span class="section-title">Custom Shell Development</span> — Advanced Linux shell with integrated voice commands
-            <ul>
-                <li>Designed and implemented a custom Linux shell with command aliases, interactive prompts, and workflow-optimizing shortcuts.</li>
-                <li>Integrated a voice-command system using speech recognition to enable hands-free file creation and navigation.</li>
-            </ul>
+    <!-- Matrix Rain Background -->
+    <div class="matrix-rain" id="matrixRain"></div>
+    
+    <!-- Particle System -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">&lt;/dhyan&gt;</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="item"><span class="section-title">Child Security Management System</span> — Python-based monitoring tool
-            <ul>
-                <li>Built an application for real-time child monitoring, tracking activity patterns and triggering emergency alerts for safety.</li>
-                <li>Designed an interactive dashboard in Jupyter Notebook for visual analytics using Python libraries.</li>
-            </ul>
-        </div>
-        <div class="item"><span class="section-title">2D Action Shooter Game</span> — Godot Engine (GDScript)
-            <ul>
-                <li>Developed a progressive 2D action shooter game with enemy AI, collision mechanics, and multi-level difficulty scaling.</li>
-                <li>Designed scoring algorithms and custom game assets to enhance replay value and player engagement.</li>
-            </ul>
-        </div>
-    </div>
+    </nav>
 
-    <!-- WORK EXPERIENCE -->
-    <h2>Work Experience</h2>
-    <div class="section-content">
-        <div class="item"><span class="section-title">Machine Learning Intern — Avinya Build AI, Cupertino</span> <span class="date">Jul 2025</span>
-            <ul>
-                <li>Trained and optimized ML models for object recognition in architectural floor plan datasets, achieving 85% accuracy.</li>
-                <li>Collaborated on dataset preprocessing, performance evaluation, and results validation while adhering to NDA protocols.</li>
-            </ul>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">dhyan@portfolio:~$</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="code-line">
+                        <span class="prompt">$</span>
+                        <span class="command" id="typewriter">whoami</span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <div class="output" id="heroOutput">
+                        <h1 class="hero-title glitch" data-text="DHYAN KUMAR M">DHYAN KUMAR M</h1>
+                        <p class="hero-subtitle">Logistic Coder and ML Enthusiast</p>
+                        <p class="hero-description">Innovative Computer Science student crafting the future with code and AI</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary neon-btn">
+                    <i class="fas fa-code"></i>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary neon-btn">
+                    <i class="fas fa-envelope"></i>
+                    Contact Me
+                </a>
+            </div>
         </div>
-        <div class="item"><span class="section-title">Sports Coordinator — Global Academy of Technology</span> <span class="date">Jan 2024</span>
-            <ul>
-                <li>Led the planning, coordination, and execution of state-level sports events involving multiple institutions.</li>
-            </ul>
+        <div class="hero-visual">
+            <div class="code-animation">
+                <div class="code-block">
+                    <span class="code-keyword">class</span> <span class="code-class">Developer</span>:<br>
+                    &nbsp;&nbsp;<span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;self.name = <span class="code-string">"Dhyan Kumar M"</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;self.skills = [<span class="code-string">"Python"</span>, <span class="code-string">"ML"</span>, <span class="code-string">"Java"</span>]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;self.passion = <span class="code-string">"Building the future"</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- CERTIFICATIONS -->
-    <h2>Certifications</h2>
-    <div class="section-content">
-        Python Programming — Infosys Springboard (2025) <br>
-        Author Certificate — IJISRT (2025) <br>
-        Abstract & Participation — IBM-Z Datathon (2024)
-    </div>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user-code"></i> About Me</h2>
+            <div class="about-content">
+                <div class="terminal-about">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">about.json</div>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="about-json">
+{
+  "name": "Dhyan Kumar M",
+  "location": "Bangalore, Karnataka",
+  "education": "B.E. Computer Science Engineering",
+  "gpa": "9/10",
+  "interests": ["Machine Learning", "Systems Programming", "AI"],
+  "summary": "Innovative and detail-oriented Computer Science enthusiast with hands-on experience in systems programming, Python development, and interactive application design. AIML enthusiast skilled in C, C++, Java, Python, and modern ML frameworks.",
+  "status": "Available for opportunities"
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- ACHIEVEMENTS -->
-    <h2>Achievements</h2>
-    <div class="section-content">
-        <ul>
-            <li>Published a research paper on AI Voice-Based Assistant in IJISRT, 2025.</li>
-        </ul>
-    </div>
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item" data-skill="90">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <span class="skill-name">C/C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend Technologies</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item" data-skill="85">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Frameworks</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon" data-tech="Git">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-icon" data-tech="Linux">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="tech-icon" data-tech="VS Code">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tech-icon" data-tech="Flask">
+                            <i class="fas fa-server"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="tech-icon" data-tech="Flutter">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="tech-icon" data-tech="ML Tools">
+                            <i class="fas fa-brain"></i>
+                            <span>YOLOv8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3 class="project-title">Custom Shell Development</h3>
+                        <span class="project-status">Advanced Systems Programming</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Advanced Linux shell terminal with integrated voice commands. Features command aliases, 
+                            interactive prompts, and workflow-optimizing shortcuts with ML-powered voice recognition.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Speech API</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/dhyanmanav" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="project-title">Child Security Management</h3>
+                        <span class="project-status">Python Monitoring System</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Real-time child monitoring application with activity pattern tracking and emergency alert system. 
+                            Features interactive dashboard with visual analytics.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Jupyter</span>
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">Real-time Monitoring</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/dhyanmanav" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="experience-title">Machine Learning Intern</h3>
+                        <h4 class="experience-company">Avinya Build AI, Cupertino</h4>
+                        <span class="experience-date">Jul 2025</span>
+                        <ul class="experience-description">
+                            <li>Trained and optimized ML models for object recognition in architectural floor plan datasets, achieving 85% accuracy</li>
+                            <li>Collaborated on dataset preprocessing, performance evaluation, and results validation while adhering to NDA protocols</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="experience-title">Sports Coordinator</h3>
+                        <h4 class="experience-company">Global Academy of Technology</h4>
+                        <span class="experience-date">Jan 2024</span>
+                        <ul class="experience-description">
+                            <li>Led the planning, coordination, and execution of state-level sports events involving multiple institutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>B.E. Computer Science Engineering</h3>
+                        <span class="education-score neon-text">GPA: 9/10</span>
+                    </div>
+                    <div class="education-body">
+                        <h4>Global Academy of Technology, Bangalore</h4>
+                        <span class="education-period">Sep 2023 – Jul 2027</span>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>2nd PUC - Karnataka State Board</h3>
+                        <span class="education-score neon-text">87.5%</span>
+                    </div>
+                    <div class="education-body">
+                        <h4>Base PU College, Bangalore</h4>
+                        <span class="education-period">Jul 2021 – Mar 2023</span>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>10th Standard - ICSE Board</h3>
+                        <span class="education-score neon-text">89.5%</span>
+                    </div>
+                    <div class="education-body">
+                        <h4>Bunts Sangha RNS Vidyaniketan, Bangalore</h4>
+                        <span class="education-period">Jul 2008 – Mar 2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications-section" id="certifications">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications & Achievements</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>Infosys Springboard (2025)</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>JAVA Fundamentals</h3>
+                    <p>Scaler (2025)</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Operating Systems</h3>
+                    <p>CISCO Network Academy (2024)</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Author Certificate</h3>
+                    <p>IJISRT Research Paper (2025)</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>IBM-Z Datathon</h3>
+                    <p>Participation Certificate (2024)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Initialize Connection</h2>
+            <div class="contact-content">
+                <div class="contact-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">contact.sh</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <a href="mailto:dhyankumar32@gmail.com" class="contact-value neon-link">dhyankumar32@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Phone:</span>
+                                <a href="tel:+918310637893" class="contact-value neon-link">+91-8310637893</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Location:</span>
+                                <span class="contact-value">Bangalore, Karnataka</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">GitHub:</span>
+                                <a href="https://github.com/dhyanmanav" target="_blank" class="contact-value neon-link">github.com/dhyanmanav</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">LinkedIn:</span>
+                                <a href="https://linkedin.com/in/dhyan-kumar-m-8238892a8" target="_blank" class="contact-value neon-link">linkedin.com/in/dhyan-kumar-m-8238892a8</a>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="mailto:dhyankumar32@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://github.com/dhyanmanav" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/dhyan-kumar-m-8238892a8" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Dhyan Kumar M. Crafted with <span class="neon-text">&lt;code/&gt;</span> and creativity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
-
-
