@@ -2319,7 +2319,7 @@ body {
   }
 }
 .btn-neon-small {
-  color: #00ffff;
+  color: green;
   background-color: rgba(0, 255, 255, 0.12);
   backdrop-filter: blur(8px);
   border-color: #00ffff;
