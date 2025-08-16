@@ -2107,3 +2107,27 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, var(--cyber-neon-blue), var(--cyber-neon-cyan));
 }
+.btn-neon {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00ffff;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn-neon:hover {
+  background-color: #00ffff;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
