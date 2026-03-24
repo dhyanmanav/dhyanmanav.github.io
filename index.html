@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHYAN KUMAR M // SYSTEM ONLINE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-matrix" id="loaderMatrix"></div>
+    <div class="loader-center">
+      <div class="loader-hex">
+        <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="60,5 115,32 115,108 60,135 5,108 5,32" stroke="url(#hexGrad)" stroke-width="2" fill="none" />
+          <defs>
+            <linearGradient id="hexGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00fff5" />
+              <stop offset="100%" stop-color="#9d00ff" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="loader-initials">DK</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <div class="loader-text" id="loaderText">INITIALIZING SYSTEM...</div>
+      <div class="loader-percent" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor-outer"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- GLITCH OVERLAY -->
+  <div class="glitch-overlay"></div>
+
+  <!-- PROGRESS BAR -->
+  <div id="progress-bar"></div>
+
+  <!-- BG CANVAS -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAVIGATION -->
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo">M<span>//</span>DK</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#experience">EXP</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#certifications">CERTS</a></li>
+      <li><a href="#dsa">DSA LAB</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status">
+        <div class="status-dot"></div>
+        <span>ONLINE</span>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mob-link">// ABOUT</a>
+    <a href="#skills" class="mob-link">// SKILLS</a>
+    <a href="#experience" class="mob-link">// EXPERIENCE</a>
+    <a href="#projects" class="mob-link">// PROJECTS</a>
+    <a href="#certifications" class="mob-link">// CERTS</a>
+    <a href="#dsa" class="mob-link">// DSA LAB</a>
+    <a href="#contact" class="mob-link">// CONTACT</a>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow-left"></div>
+      <div class="hero-glow-right"></div>
+      <canvas id="heroCanvas"></canvas>
+      <div class="hero-content">
+        <div class="hero-tag-wrap">
+          <span class="hero-tag">&#x25BA;&nbsp;PLAYER ONE HAS ENTERED&nbsp;&nbsp;// BENGALURU, INDIA</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="line1" data-text="DHYAN KUMAR">DHYAN KUMAR</span>
+          <span class="line2">M</span>
+        </h1>
+        <div class="hero-subtitle">
+          <span class="typed-text" id="typedText"></span><span class="type-cursor"></span>
+        </div>
+        <p class="hero-desc">
+          CS Engineer · ML Enthusiast · Full Stack Dev · Cybersecurity Researcher.<br>
+          Building intelligent systems from silicon to cloud.
+        </p>
+        <div class="hero-stats-row">
+          <div class="hero-stat"><span class="hstat-n">8.85</span><span class="hstat-l">CGPA</span></div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat"><span class="hstat-n">2+</span><span class="hstat-l">INTERNSHIPS</span></div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat"><span class="hstat-n">1</span><span class="hstat-l">PUBLICATION</span></div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat"><span class="hstat-n">4</span><span class="hstat-l">PROJECTS</span></div>
+        </div>
+        <div class="hero-cta">
+          <a href="resume.pdf" download class="btn-primary"><span>📄 DEV RESUME</span></a>
+          <a href="cybersecurity.pdf" target="_blank" class="btn-secondary"><span>📄 CYSEC RESUME</span></a>
+          <a href="ml.pdf" download class="btn-primary"><span>📄 ML RESUME</span></a>
+          <a href="full_stack.pdf" target="_blank" class="btn-secondary"><span>📄 FULL STACK RESUME</span></a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">SCROLL</span>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="section-header reveal">
+        <span class="section-number">// 01</span>
+        <h2 class="section-title">ABOUT <span class="accent">ME</span></h2>
+        <p class="section-sub">PERSONAL DATA FILE</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar-wrap reveal-left">
+          <div class="avatar-outer">
+            <div class="avatar-rings"></div>
+            <div class="avatar-hex">
+              <div class="avatar-orbit orbit-1">
+                <div class="orbit-dot"></div>
+              </div>
+              <div class="avatar-orbit orbit-2">
+                <div class="orbit-dot"></div>
+              </div>
+              <div class="avatar-hex-inner">
+                <span class="avatar-initials">MDK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-info reveal-right">
+          <h3 class="about-name">Dhyan Kumar M</h3>
+          <div class="about-tagline">// LOGICAL CODER &amp; ML ENTHUSIAST</div>
+          <p class="about-text">
+            A Computer Science enthusiast with a GPA of <strong class="accent-cyan">8.85/10</strong> from Global Academy
+            of Technology, Bengaluru. Passionate about system programming, Python, Full Stack development, and Machine
+            Learning. I build efficient, user-focused web and software solutions that bridge intelligence with
+            functionality.
+            <br><br>
+            Currently pursuing B.E. in CSE (2023–2027), with real-world experience in ML model training, cybersecurity
+            research, and building secure university-grade applications.
+          </p>
+          <div class="about-tags">
+            <span class="about-tag">📍 Bengaluru, India</span>
+            <span class="about-tag">🎓 B.E. CSE — GAT</span>
+            <span class="about-tag">USN: 1GA23CS040</span>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card"><span class="stat-num" data-target="885">0</span><span
+                class="stat-denom">/10</span><span class="stat-label">CGPA</span></div>
+            <div class="stat-card"><span class="stat-num" data-target="2">0</span><span class="stat-denom">+</span><span
+                class="stat-label">INTERNSHIPS</span></div>
+            <div class="stat-card"><span class="stat-num" data-target="1">0</span><span
+                class="stat-label">PUBLICATION</span></div>
+            <div class="stat-card"><span class="stat-num" data-target="6">0</span><span
+                class="stat-label">CERTIFICATIONS</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <span class="section-number">// 02</span>
+        <h2 class="section-title">TECH <span class="accent">STACK</span></h2>
+        <p class="section-sub">WEAPONS OF CHOICE</p>
+      </div>
+      <div class="skills-container">
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">⚡ LANGUAGES</div>
+            <div class="skill-items">
+              <span class="skill-tag" data-glow="cyan">C</span>
+              <span class="skill-tag" data-glow="cyan">Java</span>
+              <span class="skill-tag" data-glow="cyan">Python</span>
+              <span class="skill-tag" data-glow="cyan">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🌐 FULL STACK</div>
+            <div class="skill-items">
+              <span class="skill-tag" data-glow="magenta">HTML5</span>
+              <span class="skill-tag" data-glow="magenta">CSS3</span>
+              <span class="skill-tag" data-glow="magenta">Bootstrap</span>
+              <span class="skill-tag" data-glow="magenta">React</span>
+              <span class="skill-tag" data-glow="magenta">Node.js</span>
+              <span class="skill-tag" data-glow="magenta">MongoDB</span>
+              <span class="skill-tag" data-glow="magenta">Express</span>
+              <span class="skill-tag" data-glow="magenta">MERN Stack</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🧠 ML / AI</div>
+            <div class="skill-items">
+              <span class="skill-tag" data-glow="purple">TensorFlow</span>
+              <span class="skill-tag" data-glow="purple">scikit-learn</span>
+              <span class="skill-tag" data-glow="purple">OpenCV</span>
+              <span class="skill-tag" data-glow="purple">NLP</span>
+              <span class="skill-tag" data-glow="purple">Pandas</span>
+              <span class="skill-tag" data-glow="purple">NumPy</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🛠️ TOOLS &amp; CLOUD</div>
+            <div class="skill-items">
+              <span class="skill-tag" data-glow="green">Git</span>
+              <span class="skill-tag" data-glow="green">Kali Linux</span>
+              <span class="skill-tag" data-glow="green">AWS</span>
+              <span class="skill-tag" data-glow="green">Netlify</span>
+              <span class="skill-tag" data-glow="green">Supabase</span>
+              <span class="skill-tag" data-glow="green">PostgreSQL</span>
+              <span class="skill-tag" data-glow="green">Render</span>
+            </div>
+          </div>
+        </div>
+        <!-- Animated skill bars -->
+        <div class="skill-bars-wrap reveal">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Python / ML</span><span class="skill-pct" data-pct="88">0%</span></div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill cyan-fill" data-width="88"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Full Stack (MERN)</span><span class="skill-pct" data-pct="83">0%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill magenta-fill" data-width="83"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>C / Java / System</span><span class="skill-pct" data-pct="80">0%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill purple-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Cybersecurity / Linux</span><span class="skill-pct"
+                data-pct="75">0%</span></div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill green-fill" data-width="75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience">
+      <div class="section-header reveal">
+        <span class="section-number">// 03</span>
+        <h2 class="section-title">WORK <span class="accent">EXPERIENCE</span></h2>
+        <p class="section-sub">FIELD OPERATIONS LOG</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot-outer">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-badge">LATEST</div>
+            <div class="tl-company">MAHE-ISAC CENTRE OF EXCELLENCE FOR CYBERSECURITY</div>
+            <div class="tl-role">Student Intern — Cybersecurity Research</div>
+            <div class="tl-date">19-JAN-2026 → 19-FEB-2026</div>
+            <ul class="tl-bullets">
+              <li>Completed a 1-month internship at MAHE-ISAC CoE for Cybersecurity, Manipal Academy of Higher
+                Education.</li>
+              <li>Made significant contributions in <strong class="accent-cyan">Cyber Forensic Evidence Integrity and
+                  Trust Verification System</strong>.</li>
+              <li>Worked under the mentorship of <strong class="accent-yellow">Dr. Srikanth Prabhu</strong>, Professor,
+                School of Computer Engineering.</li>
+              <li>Certificate issued by <strong class="accent-green">Cdr. (Dr.) Anil Rana</strong>, Director, Manipal
+                Institute of Technology.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot-outer">
+            <div class="timeline-dot-inner tl-dot-magenta"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-company">AVINYA BUILD AI — CUPERTINO, USA</div>
+            <div class="tl-role">Machine Learning Intern</div>
+            <div class="tl-date">JUL 2025</div>
+            <ul class="tl-bullets">
+              <li>Trained ML models for <strong class="accent-cyan">object recognition in architectural
+                  datasets</strong>, achieving 85% accuracy.</li>
+              <li>Collaborated on dataset preprocessing, performance evaluation, and results validation.</li>
+              <li>Adhered to strict NDA protocols throughout the engagement.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <span class="section-number">// 04</span>
+        <h2 class="section-title">ACTIVE <span class="accent">MISSIONS</span></h2>
+        <p class="section-sub">BUILD LOG // PROJECTS</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" data-index="01">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><span class="project-icon">🖥️</span></div>
+            <div class="project-links">
+              <a href="https://github.com/dhyanmanav/MANAV-SHELL-TERMINAL" target="_blank" class="proj-link"
+                title="GitHub">GH</a>
+              <a href="https://manav-shell.netlify.app/" target="_blank" class="proj-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">// PROJECT_01</div>
+            <div class="project-title">Custom Shell Development</div>
+            <p class="project-desc">Advanced Linux shell terminal with integrated voice commands — a hands-free command
+              interface powered by ML for multi-language voice-to-shell mapping.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">ML Model</span>
+              <span class="tech-tag">Web Speech API</span>
+              <span class="tech-tag">Netlify</span>
+            </div>
+            <div class="project-highlight">✅ Voice commands in any language → shell execution. 80% accuracy. Deployed.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="02">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><span class="project-icon">📱</span></div>
+            <div class="project-links">
+              <a href="https://github.com/dhyanmanav/GAT-CMS-2" target="_blank" class="proj-link" title="GitHub">GH</a>
+              <a href="https://gatcms.netlify.app/" target="_blank" class="proj-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">// PROJECT_02</div>
+            <div class="project-title">Student Certificate Management APK</div>
+            <p class="project-desc">Secure university app for issuing and managing official documents — bonafide,
+              internships, and transcripts — with role-based dashboards, digital signatures, and QR verification.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">OTP Auth</span>
+            </div>
+            <div class="project-highlight">🔐 QR Code verification + Digital Signatures + Audit Trails</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="03">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><span class="project-icon">🔍</span></div>
+            <div class="project-links">
+              <a href="https://mp-g1.netlify.app/" target="_blank" class="proj-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">// PROJECT_03</div>
+            <div class="project-title">Cyber Forensic Evidence Integrity &amp; Trust Verification System</div>
+            <p class="project-desc">Research and development project at MAHE-ISAC CoE for Cybersecurity focused on
+              ensuring tamper-proof digital evidence integrity in forensic investigations.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Cybersecurity</span>
+              <span class="tech-tag">Forensics</span>
+              <span class="tech-tag">Trust Systems</span>
+              <span class="tech-tag">MAHE-ISAC</span>
+            </div>
+            <div class="project-highlight">🏛️ Internship @ Manipal Academy · Jan–Feb 2026</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="04">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><span class="project-icon">🤖</span></div>
+            <div class="project-links">
+              <a href="https://www.ijisrt.com/ai-voicebased-revision-assistant" target="_blank" class="proj-link"
+                title="Research Paper">📄</a>
+              <a href="https://ai-personal.vercel.app/" target="_blank" class="proj-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">// PROJECT_04</div>
+            <div class="project-title">AI Voice-Based Assistant</div>
+            <p class="project-desc">Published research on an AI-driven voice assistant system. Featured in IJISRT
+              (International Journal of Innovative Science and Research Technology), 2025.</p>
+            <div class="project-tech">
+              <span class="tech-tag">AI</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Research</span>
+            </div>
+            <div class="project-highlight">📄 Published Paper · IJISRT 2025 · Author Certificate Awarded</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications">
+      <div class="section-header reveal">
+        <span class="section-number">// 05</span>
+        <h2 class="section-title">CERTIF<span class="accent">ICATIONS</span></h2>
+        <p class="section-sub">BADGES EARNED // UNLOCKED ACHIEVEMENTS</p>
+      </div>
+      <div class="certs-grid">
+
+        <a href="https://drive.google.com/file/d/1J4syXkt7Pqqe15H16tjb5nFrE8_zz9TS/view" target="_blank"
+          class="cert-card reveal">
+          <div class="cert-glow-bar"></div>
+          <div class="cert-icon">☁️</div>
+          <div class="cert-issuer">GOOGLE CLOUD</div>
+          <div class="cert-name">Google Cloud Career Launchpad — Generative AI Leader Track</div>
+          <div class="cert-year">2025</div>
+          <div class="cert-verify">VERIFY ↗</div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1rjUNU42-bAyXJEb2yAKnfCjAKFcV8Iqt/view" target="_blank"
+          class="cert-card reveal">
+          <div class="cert-glow-bar"></div>
+          <div class="cert-icon">📊</div>
+          <div class="cert-issuer">TCS FORAGE</div>
+          <div class="cert-name">GenAI Powered Data Analytics Job Simulation</div>
+          <div class="cert-year">2025</div>
+          <div class="cert-verify">VERIFY ↗</div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1hb9QN4pN9f-tR-ui5-RMUtxsscXXpvV7/view" target="_blank"
+          class="cert-card reveal">
+          <div class="cert-glow-bar"></div>
+          <div class="cert-icon">☕</div>
+          <div class="cert-issuer">SCALER</div>
+          <div class="cert-name">Java — Mastering the Fundamentals</div>
+          <div class="cert-year">2025</div>
+          <div class="cert-verify">VERIFY ↗</div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1QRuIwkXKj70ZH7eE1L29xXc6aGMXQ5MC/view" target="_blank"
+          class="cert-card reveal">
+          <div class="cert-glow-bar"></div>
+          <div class="cert-icon">🌐</div>
+          <div class="cert-issuer">CISCO NETWORKING ACADEMY</div>
+          <div class="cert-name">Operating Systems Basics</div>
+          <div class="cert-year">2024</div>
+          <div class="cert-verify">VERIFY ↗</div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1a_Kiw9IeRmaoG_jpi0ONPq7Yr_ff3FiQ/view" target="_blank"
+          class="cert-card reveal">
+          <div class="cert-glow-bar"></div>
+          <div class="cert-icon">📄</div>
+          <div class="cert-issuer">IJISRT</div>
+          <div class="cert-name">Author Certificate — AI Voice-Based Assistant Research Paper</div>
+          <div class="cert-year">2025</div>
+          <div class="cert-verify">VIEW PAPER ↗</div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1eDRcPdXscjr6JfQ2_B_CAJfAyZK7sKiu/view?usp=sharing" target="_blank"
+          class="cert-card reveal">
+          <div class="cert-glow-bar"></div>
+          <div class="cert-icon">🔐</div>
+          <div class="cert-issuer">MAHE-ISAC CoE FOR CYBERSECURITY</div>
+          <div class="cert-name">Internship Certificate — Cyber Forensics Research</div>
+          <div class="cert-year">FEB 2026</div>
+          <div class="cert-verify">VERIFY ↗</div>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section id="achievements">
+      <div class="section-header reveal">
+        <span class="section-number">// 06</span>
+        <h2 class="section-title">ACHIEV<span class="accent">EMENTS</span></h2>
+        <p class="section-sub">TROPHIES UNLOCKED</p>
+      </div>
+      <div class="achievements-wrap">
+
+        <div class="achievement-item reveal">
+          <div class="ach-icon-wrap">
+            <div class="ach-icon">📜</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-rank">RANK_01</div>
+            <div class="ach-title">PUBLISHED RESEARCH PAPER — IJISRT 2025</div>
+            <div class="ach-desc">Published an original research paper on AI Voice-Based Assistants in the International
+              Journal of Innovative Science and Research Technology (IJISRT), 2025. Awarded Author Certificate.</div>
+            <a href="https://www.ijisrt.com/ai-voicebased-revision-assistant" target="_blank" class="ach-link">READ
+              PUBLICATION ↗</a>
+          </div>
+        </div>
+
+        <div class="achievement-item reveal">
+          <div class="ach-icon-wrap">
+            <div class="ach-icon">🏛️</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-rank">RANK_02</div>
+            <div class="ach-title">MAHE-ISAC CYBERSECURITY INTERNSHIP — MANIPAL 2026</div>
+            <div class="ach-desc">Selected for and completed research internship at one of India's premier cybersecurity
+              centres — MAHE-ISAC Centre of Excellence at Manipal Institute of Technology, mentored by Dr. Srikanth
+              Prabhu.</div>
+          </div>
+        </div>
+
+        <div class="achievement-item reveal">
+          <div class="ach-icon-wrap">
+            <div class="ach-icon">☁️</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-rank">RANK_03</div>
+            <div class="ach-title">GOOGLE CLOUD GENERATIVE AI LEADER — 2025</div>
+            <div class="ach-desc">Completed the highly competitive Google Cloud Career Launchpad — Generative AI Leader
+              Track, demonstrating proficiency in cloud-based AI architecture and deployment.</div>
+            <a href="https://drive.google.com/file/d/1J4syXkt7Pqqe15H16tjb5nFrE8_zz9TS/view" target="_blank"
+              class="ach-link">VIEW PROGRAM ↗</a>
+          </div>
+        </div>
+
+        <div class="achievement-item reveal">
+          <div class="ach-icon-wrap">
+            <div class="ach-icon">🎓</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-rank">RANK_04</div>
+            <div class="ach-title">CGPA 8.85 / 10 — GLOBAL ACADEMY OF TECHNOLOGY</div>
+            <div class="ach-desc">Maintaining an excellent academic record of 8.85 CGPA in B.E. Computer Science &amp;
+              Engineering at Global Academy of Technology, Bengaluru (2023–2027).</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
+      <div class="section-header reveal">
+        <span class="section-number">// 07</span>
+        <h2 class="section-title">EDUC<span class="accent">ATION</span></h2>
+        <p class="section-sub">TRAINING GROUNDS</p>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-school">GLOBAL ACADEMY OF TECHNOLOGY</div>
+            <div class="edu-degree">B.E. — Computer Science &amp; Engineering</div>
+            <div class="edu-meta">
+              <span class="edu-gpa">GPA: <strong>8.85 / 10</strong></span>
+              <span class="edu-loc">Bengaluru, Karnataka</span>
+              <span class="edu-usn">USN: 1GA23CS040</span>
+            </div>
+            <div class="edu-date">SEP 2023 → JUL 2027</div>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="edu-dot edu-dot-magenta"></div>
+          <div class="edu-card">
+            <div class="edu-school">BASE PU COLLEGE</div>
+            <div class="edu-degree">Karnataka State Board — 2nd PUC</div>
+            <div class="edu-meta">
+              <span class="edu-gpa">Score: <strong>87.5%</strong></span>
+              <span class="edu-loc">Bengaluru, Karnataka</span>
+            </div>
+            <div class="edu-date">JUL 2021 → MAR 2023</div>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="edu-dot edu-dot-yellow"></div>
+          <div class="edu-card">
+            <div class="edu-school">BUNTS SANGHA RNS VIDYANIKETAN</div>
+            <div class="edu-degree">ICSE Board — 10th Standard</div>
+            <div class="edu-meta">
+              <span class="edu-gpa">Score: <strong>89.5%</strong></span>
+              <span class="edu-loc">Bengaluru, Karnataka</span>
+            </div>
+            <div class="edu-date">JUL 2008 → MAR 2021</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== DSA ALGORITHM LAB ===== -->
+    <section id="dsa">
+      <div class="section-header reveal">
+        <span class="section-number">// 08</span>
+        <h2 class="section-title">DSA <span class="accent">LAB</span></h2>
+        <p class="section-sub">ALGORITHM SIMULATIONS // LIVE VISUALIZER</p>
+      </div>
+
+      <div class="dsa-container reveal">
+        <!-- Algorithm Selector -->
+        <div class="dsa-selector">
+          <button class="dsa-btn" data-algo="bubble">BUBBLE SORT</button>
+          <button class="dsa-btn" data-algo="merge">MERGE SORT</button>
+          <button class="dsa-btn" data-algo="binary">BINARY SEARCH</button>
+          <button class="dsa-btn" data-algo="bfs">GRAPH BFS</button>
+          <button class="dsa-btn" data-algo="stack">STACK OPS</button>
+        </div>
+
+        <!-- Controls -->
+        <div class="dsa-controls">
+          <button class="dsa-ctrl-btn" id="dsaPlay">▶ RUN</button>
+          <button class="dsa-ctrl-btn" id="dsaReset">↺ RESET</button>
+          <div class="dsa-speed-wrap">
+            <span>SPEED:</span>
+            <input type="range" id="dsaSpeed" min="50" max="900" value="400" class="dsa-slider">
+          </div>
+          <div class="dsa-input-wrap" id="dsaInputWrap">
+            <input type="number" id="dsaSearchVal" placeholder="Search value..." class="dsa-input" min="1" max="99">
+          </div>
+        </div>
+
+        <!-- Visualizer Canvas -->
+        <div class="dsa-vis-wrap">
+          <canvas id="dsaCanvas"></canvas>
+          <div class="dsa-overlay" id="dsaOverlay">
+            <div class="dsa-algo-name" id="dsaAlgoName">BUBBLE SORT</div>
+            <div class="dsa-complexity">
+              <span id="dsaTimeComp">Time: O(n²)</span>
+              <span id="dsaSpaceComp">Space: O(1)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="dsa-info-panel">
+          <div class="dsa-log" id="dsaLog">
+            <div class="log-line">&gt; SELECT AN ALGORITHM AND PRESS RUN</div>
+          </div>
+          <div class="dsa-stats">
+            <div class="dsa-stat-item"><span class="dsa-stat-label">COMPARISONS</span><span class="dsa-stat-val"
+                id="cmpCount">0</span></div>
+            <div class="dsa-stat-item"><span class="dsa-stat-label">SWAPS</span><span class="dsa-stat-val"
+                id="swapCount">0</span></div>
+            <div class="dsa-stat-item"><span class="dsa-stat-label">STATUS</span><span class="dsa-stat-val"
+                id="algoStatus">IDLE</span></div>
+          </div>
+        </div>
+
+        <!-- Pseudocode Panel -->
+        <div class="dsa-code-panel">
+          <div class="dsa-code-title">PSEUDOCODE</div>
+          <pre class="dsa-pseudo" id="dsaPseudo">
+<span class="ps-comment">// Select an algorithm to see pseudocode</span>
+          </pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <span class="section-number">// 09</span>
+        <h2 class="section-title">INIT <span class="accent">CONTACT</span></h2>
+        <p class="section-sub">OPEN COMMS CHANNEL</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3 class="contact-headline">Let's Build<br>Something Legendary</h3>
+          <p class="contact-desc">Open for collaborations, internships, research roles, and full-time opportunities.
+            Drop a message and I'll respond within 24 hours.</p>
+          <div class="contact-links">
+            <a href="mailto:dhyanmanav@gmail.com" class="contact-link">
+              <div class="contact-link-icon">✉</div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">// EMAIL</span>
+                <span class="contact-link-val">dhyanmanav@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+918310637893" class="contact-link">
+              <div class="contact-link-icon">📞</div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">// PHONE</span>
+                <span class="contact-link-val">+91 8310637893</span>
+              </div>
+            </a>
+            <a href="https://github.com/dhyanmanav" target="_blank" class="contact-link">
+              <div class="contact-link-icon">⌥</div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">// GITHUB</span>
+                <span class="contact-link-val">github.com/dhyanmanav</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/dhyan-kumar-m-8238892a8" target="_blank" class="contact-link">
+              <div class="contact-link-icon">in</div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">// LINKEDIN</span>
+                <span class="contact-link-val">dhyan-kumar-m</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form reveal-right">
+          <div class="form-group">
+            <label class="form-label">// YOUR NAME</label>
+            <input type="text" placeholder="Enter callsign..." id="fName" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">// EMAIL</label>
+            <input type="email" placeholder="secure@channel.com" id="fEmail" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">// MISSION BRIEF</label>
+            <textarea placeholder="Describe your mission..." id="fMsg" class="form-textarea"></textarea>
+          </div>
+          <button class="form-submit" id="formSubmit"><span>⟶ TRANSMIT MESSAGE</span></button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">M<span>//</span>DK</div>
+    <div class="footer-text">
+      DHYAN KUMAR M · BENGALURU, INDIA<br>
+      <span class="footer-copy">© 2026 · BUILT WITH NEON &amp; PASSION</span>
+    </div>
+    <div class="footer-socials">
+      <a href="https://github.com/dhyanmanav" target="_blank" class="footer-soc">GH</a>
+      <a href="https://linkedin.com/in/dhyan-kumar-m-8238892a8" target="_blank" class="footer-soc">LI</a>
+      <a href="mailto:dhyanmanav@gmail.com" class="footer-soc">✉</a>
+    </div>
+  </footer>
+
+  <!-- Hex Floating Chars Container -->
+  <div id="hexContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
